@@ -13,3 +13,13 @@ intermediate_callback: Error in Function::operator() for 'NlpsolCallback' [Callb
 .../casadi/core/callback_internal.cpp:104: Error calling "eval" for object NlpsolCallback:
 File 'delete_this_to_stop_optimization__2021-03-01T101127.185898.txt' deleted.
 	Thrown at MocoUtilities.h:814 in throwIfDeleted().
+intermediate_callback: Error in Function::operator() for 'NlpsolCallback' [CallbackInternal] at .../casadi/core/function.cpp:1319:
+.../casadi/core/function_internal.cpp:3119: Failed to evaluate 'eval_dm' for NlpsolCallback:
+.../casadi/core/callback_internal.cpp:104: Error calling "eval" for object NlpsolCallback:
+File 'delete_this_to_stop_optimization__2021-03-01T120228.741508.txt' deleted.
+	Thrown at MocoUtilities.h:814 in throwIfDeleted().
+intermediate_callback: Error in Function::operator() for 'NlpsolCallback' [CallbackInternal] at .../casadi/core/function.cpp:1319:
+.../casadi/core/function_internal.cpp:3119: Failed to evaluate 'eval_dm' for NlpsolCallback:
+.../casadi/core/callback_internal.cpp:104: Error calling "eval" for object NlpsolCallback:
+File 'delete_this_to_stop_optimization__2021-03-01T121920.876321.txt' deleted.
+	Thrown at MocoUtilities.h:814 in throwIfDeleted().
