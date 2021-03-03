@@ -1,21 +1,19 @@
-% -------------------------------------------------------------------------- %
-% OpenSim Moco: buildModel_cyclistFullBodyMuscleActuated.m                   %
-% -------------------------------------------------------------------------- %
-% Copyright (c) Ross Wilkinson                                               %
-%                                                                            %
-% Author(s): Ross Wilkinson                                                  %
-% GitHub: https://github.com/ross-wilkinson/moco-cycling-standing            %
-%                                                                            %
-% Licensed under the Apache License, Version 2.0 (the "License"); you may    %
-% not use this file except in compliance with the License. You may obtain a  %
-% copy of the License at http://www.apache.org/licenses/LICENSE-2.0          %
-%                                                                            %
-% Unless required by applicable law or agreed to in writing, software        %
-% distributed under the License is distributed on an "AS IS" BASIS,          %
-% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.   %
-% See the License for the specific language governing permissions and        %
-% limitations under the License.                                             %
-% -------------------------------------------------------------------------- %
+%% OpenSim Moco: buildModel_cyclistFullBodyMuscleActuated.m
+
+% Copyright (c) Ross Wilkinson
+
+% Author(s): Ross Wilkinson 
+% GitHub: https://github.com/ross-wilkinson/moco-cycling-standing
+
+% Licensed under the Apache License, Version 2.0 (the "License"); you may
+% not use this file except in compliance with the License. You may obtain a
+% copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+% WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+% License for the specific language governing permissions and limitations
+% under the License.
 
 %% Initialize script
 
@@ -44,8 +42,16 @@ sternumMass = 1e-4 * mass;
 clavicleMass = 1e-4 * mass;
 scapulaMass = 1e-4 * mass;
 upperArmMass = 0.05 * mass;
+forearmMass = 0.03 * mass;
+handMass = 0.01 * mass;
+thighMass = 0.1 * mass;
+shankMass = 0.1 * mass;
+patellaMass = 1e-4 * mass;
+talusMass = 0.01 * mass;
+calcaneusMass = 0.02 * mass;
+toesMass = 0.01 * mass;
 
-%% Bodies and Joints (BodySet, JointSet)
+%% BODIES AND JOINTS (BodySet, JointSet)
 
 % Body: Head and Neck
 head = Body('head', headMass, Vec3(0), Inertia(1));
@@ -593,7 +599,7 @@ shoulderRight = BallJoint('shoulderRight', ...
 model.addJoint(shoulderRight);
 
 % Body: Forearm Right
-forearmRight = Body('forearmRight', upperArmMass, Vec3(0), Inertia(1));
+forearmRight = Body('forearmRight', forearmMass, Vec3(0), Inertia(1));
 forearmRight.attachGeometry(Mesh('r_ulna.vtp'));
 forearmRight.attachGeometry(Mesh('r_radius.vtp'));
 model.addBody(forearmRight);
@@ -605,136 +611,211 @@ elbowRight = PinJoint('elbowRight', ...
 model.addJoint(elbowRight);
 
 % Body: Hand Right
-handRight = Body('forearmRight', upperArmMass, Vec3(0), Inertia(1));
-handRight.attachGeometry(Mesh('r_ulna.vtp'));
+handRight = Body('handRight', handMass, Vec3(0), Inertia(1));
+handRight.attachGeometry(Mesh('r_hand.vtp'));
 model.addBody(handRight);
 
-% 
-
+% Joint: Wrist Right
+wristRight = PinJoint('wristRight', ... 
+    forearmRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    handRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(wristRight);
 
 %% Left Upper Limb including shoulder girdle
 
+% Body: Clavicle Left
+clavicleLeft = Body('clavicleLeft', clavicleMass, Vec3(0), Inertia(1));
+clavicleLeft.attachGeometry(Mesh('l_clavicle.vtp'));
+model.addBody(clavicleLeft);
+
+% Joint: Sternoclavicular Left
+sternoclavicularLeft = WeldJoint('sternoclavicularLeft', ... 
+    sternum, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    clavicleLeft, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(sternoclavicularLeft);
+
+% Body: Scapula Left
+scapulaLeft = Body('scapulaLeft', scapulaMass, Vec3(0), Inertia(1));
+scapulaLeft.attachGeometry(Mesh('l_scapula.vtp'));
+model.addBody(scapulaLeft);
+
+% Joint: Acromioclavicular Left
+acromioclavicularLeft = WeldJoint('acromioclavicularLeft', ... 
+    clavicleLeft, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    scapulaLeft, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(acromioclavicularLeft);
+
+% Body: Upper Arm Left
+upperArmLeft = Body('upperArmLeft', upperArmMass, Vec3(0), Inertia(1));
+upperArmLeft.attachGeometry(Mesh('l_humerus.vtp'));
+model.addBody(upperArmLeft);
+
+% Joint: Shoulder Left
+shoulderLeft = BallJoint('shoulderLeft', ... 
+    scapulaLeft, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    upperArmLeft, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(shoulderLeft);
+
+% Body: Forearm Left
+forearmLeft = Body('forearmLeft', forearmMass, Vec3(0), Inertia(1));
+forearmLeft.attachGeometry(Mesh('l_ulna.vtp'));
+forearmLeft.attachGeometry(Mesh('l_radius.vtp'));
+model.addBody(forearmLeft);
+
+% Joint: Elbow Left
+elbowLeft = PinJoint('elbowLeft', ... 
+    upperArmLeft, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    forearmLeft, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(elbowLeft);
+
+% Body: Hand Left
+handLeft = Body('handLeft', handMass, Vec3(0), Inertia(1));
+handLeft.attachGeometry(Mesh('l_hand.vtp'));
+model.addBody(handLeft);
+
+% Joint: Wrist Left
+wristLeft = PinJoint('wristLeft', ... 
+    forearmLeft, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    handLeft, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(wristLeft);
 
 %% Right Lower Limb
 
+% Body: Thigh Right
+thighRight = Body('thighRight', thighMass, Vec3(0), Inertia(1));
+thighRight.attachGeometry(Mesh('r_femur.vtp'));
+model.addBody(thighRight);
+
+% Joint: Hip Right
+hipRight = BallJoint('hipRight', ... 
+    pelvis, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    thighRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(hipRight);
+
+% Body: Shank Right
+shankRight = Body('shankRight', shankMass, Vec3(0), Inertia(1));
+shankRight.attachGeometry(Mesh('r_tibia.vtp'));
+shankRight.attachGeometry(Mesh('r_fibula.vtp'));
+model.addBody(shankRight);
+
+% Joint: Knee Right
+kneeRight = BallJoint('kneeRight', ... 
+    thighRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    shankRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(kneeRight);
+
+% Body: Patella Right
+patellaRight = Body('patellaRight', patellaMass, Vec3(0), Inertia(1));
+patellaRight.attachGeometry(Mesh('r_patella.vtp'));
+model.addBody(patellaRight);
+
+% Joint: Patellofemoral Right
+patellofemoralRight = WeldJoint('patellofemoralRight', ... 
+    thighRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    patellaRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(patellofemoralRight);
+
+% Body: Talus Right
+talusRight = Body('talusRight', talusMass, Vec3(0), Inertia(1));
+talusRight.attachGeometry(Mesh('r_talus.vtp'));
+model.addBody(talusRight);
+
+% Joint: Ankle Right
+ankleRight = PinJoint('ankleRight', ... 
+    shankRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    talusRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(ankleRight);
+
+% Body: Calcaneus Right
+calcaneusRight = Body('calcaneusRight', calcaneusMass, Vec3(0), Inertia(1));
+calcaneusRight.attachGeometry(Mesh('r_foot.vtp'));
+model.addBody(calcaneusRight);
+
+% Joint: Subtalar Right
+subtalarRight = PinJoint('subtalarRight', ... 
+    talusRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    calcaneusRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(subtalarRight);
+
+% Body: Toes Right
+toesRight = Body('toesRight', toesMass, Vec3(0), Inertia(1));
+toesRight.attachGeometry(Mesh('r_toes.vtp'));
+model.addBody(toesRight);
+
+% Joint: MTP Right
+mtpRight = PinJoint('mtpRight', ... 
+    calcaneusRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    toesRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(mtpRight);
 
 %% Left Lower Limb
 
-
-% Body: Thigh Right
-% -----------------
-
-
-% Joint: Hip Right
-
-
-% Body: Shank Right
-
-
-% Joint: Knee Right
-
-
-% Body: Patella Right
-
-
-% Joint: Patellofemoral Right
-
-
-% Body: Talus Right
-% ----------------
-
-
-% Joint: Ankle Right
-% ------------------
-
-
-% Body: Calcanus Right
-% --------------------
-
-
-% Joint: Subtalar Right
-% ---------------------
-
-
-% Body: Toes Right
-% ----------------
-
-
-% Joint: MTP Right
-% ----------------
-
-
 % Body: Thigh Left
-% ----------------
-
+thighLeft = Body('thighLeft', thighMass, Vec3(0), Inertia(1));
+thighLeft.attachGeometry(Mesh('l_femur.vtp'));
+model.addBody(thighLeft);
 
 % Joint: Hip Left
-% ---------------
-
+hipLeft = BallJoint('hipLeft', ... 
+    pelvis, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    thighLeft, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(hipLeft);
 
 % Body: Shank Left
-% ----------------
+shankLeft = Body('shankLeft', shankMass, Vec3(0), Inertia(1));
+shankLeft.attachGeometry(Mesh('l_tibia.vtp'));
+shankLeft.attachGeometry(Mesh('l_fibula.vtp'));
+model.addBody(shankLeft);
 
 % Joint: Knee Left
-% ----------------
+kneeLeft = CustomJoint('kneeLeft', ... 
+    thighLeft, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    shankLeft, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(kneeLeft);
 
+% Body: Patella Right
+patellaRight = Body('patellaRight', patellaMass, Vec3(0), Inertia(1));
+patellaRight.attachGeometry(Mesh('r_patella.vtp'));
+model.addBody(patellaRight);
 
-% Body: Patella Left
-% ------------------
+% Joint: Patellofemoral Right
+patellofemoralRight = WeldJoint('patellofemoralRight', ... 
+    thighRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    patellaRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(patellofemoralRight);
 
+% Body: Talus Right
+talusRight = Body('talusRight', talusMass, Vec3(0), Inertia(1));
+talusRight.attachGeometry(Mesh('r_talus.vtp'));
+model.addBody(talusRight);
 
-% Joint: Patellofemoral Left
-% --------------------------
+% Joint: Ankle Right
+ankleRight = PinJoint('ankleRight', ... 
+    shankRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    talusRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(ankleRight);
 
+% Body: Calcaneus Right
+calcaneusRight = Body('calcaneusRight', calcaneusMass, Vec3(0), Inertia(1));
+calcaneusRight.attachGeometry(Mesh('r_foot.vtp'));
+model.addBody(calcaneusRight);
 
-% Body: Talus Left
-% ================
+% Joint: Subtalar Right
+subtalarRight = PinJoint('subtalarRight', ... 
+    talusRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    calcaneusRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(subtalarRight);
 
+% Body: Toes Right
+toesRight = Body('toesRight', toesMass, Vec3(0), Inertia(1));
+toesRight.attachGeometry(Mesh('r_toes.vtp'));
+model.addBody(toesRight);
 
-% Joint: Ankle Left
-% -----------------
-
-
-% Body: Calcaneus Left
-% --------------------
-
-
-% Joint: Subtalar Left
-% --------------------
-
-
-% Body: Toes Left
-% ---------------
-
-
-% Joint: MTP Left
-% ---------------
-
-
-% Body: Abdomen
-% -------------
-
-
-% Joint: Abdomen to Pelvis
-% ------------------------
-
-
-% Body: Lumbar 5
-% --------------
-
-
-
-
-% Body: Lumbar 4
-% --------------
-
-
-% Joint: L5 To L4
-% ---------------
-
-
-
-
+% Joint: MTP Right
+mtpRight = PinJoint('mtpRight', ... 
+    calcaneusRight, Vec3(0), Vec3(0), ... % parent, trans., orien.
+    toesRight, Vec3(0), Vec3(0)); % child, trans., orien. 
+model.addJoint(mtpRight);
 
 %% Muscles (ForceSet)
 % 
