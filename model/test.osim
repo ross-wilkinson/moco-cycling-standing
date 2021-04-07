@@ -39,7 +39,7 @@
 		<!--Credits (e.g., model author names) associated with the model.-->
 		<credits>Rajagopal et al., Lai et al., Burkhart et al., Saul et al.</credits>
 		<!--Publications and references associated with the model.-->
-		<publications/>
+		<publications></publications>
 		<!--Units for all lengths.-->
 		<length_units>meters</length_units>
 		<!--Units for all forces.-->
@@ -420,7 +420,7 @@
 					<mass_center>0 0 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0.0001 0.0001 0.0001 0 0 0</inertia>
-				</Body>				
+				</Body>
 				<Body name="femur_r">
 					<!--The geometry used to display the axes of this Frame.-->
 					<FrameGeometry name="frame_geometry">
@@ -4424,7 +4424,7 @@
 					<mass_center>0 0 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0.01 0.01 0.01 0 0 0</inertia>
-				</Body>				
+				</Body>
 				<Body name="clavicle_R">
 					<!--The geometry used to display the axes of this Frame.-->
 					<FrameGeometry name="frame_geometry">
@@ -4496,7 +4496,7 @@
 					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
 					<WrapObjectSet name="wrapobjectset">
 						<objects>
-							<WrapCylinder name="TRIlongglen">
+							<WrapCylinder name="TRIlongglen_r">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -4533,7 +4533,7 @@
 					<mass_center>0 0 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0.0001 0.0001 0.0001 0 0 0</inertia>
-				</Body>				
+				</Body>
 				<Body name="humerus_r">
 					<!--The geometry used to display the axes of this Frame.-->
 					<FrameGeometry name="frame_geometry">
@@ -4563,7 +4563,7 @@
 					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
 					<WrapObjectSet name="wrapobjectset">
 						<objects>
-							<WrapEllipsoid name="Elbow_BIC_BRD">
+							<WrapEllipsoid name="Elbow_BIC_BRD_r">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -4589,7 +4589,7 @@
 								<!--The length of the radii of the ellipsoid.-->
 								<dimensions>0.014999999999999999 0.014999999999999999 0.10000000000000001</dimensions>
 							</WrapEllipsoid>
-							<WrapEllipsoid name="TRIlonghh">
+							<WrapEllipsoid name="TRIlonghh_r">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -4615,7 +4615,7 @@
 								<!--The length of the radii of the ellipsoid.-->
 								<dimensions>0.035000000000000003 0.02 0.02</dimensions>
 							</WrapEllipsoid>
-							<WrapCylinder name="TRI">
+							<WrapCylinder name="TRI_r">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -4643,7 +4643,7 @@
 								<!--The length of the cylinder.-->
 								<length>0.10000000000000001</length>
 							</WrapCylinder>
-							<WrapEllipsoid name="ANC">
+							<WrapEllipsoid name="ANC_r">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -4669,7 +4669,7 @@
 								<!--The length of the radii of the ellipsoid.-->
 								<dimensions>0.02 0.02 0.02</dimensions>
 							</WrapEllipsoid>
-							<WrapEllipsoid name="BIClong">
+							<WrapEllipsoid name="BIClong_r">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -4800,7 +4800,7 @@
 								<!--The length of the cylinder.-->
 								<length>0.040000000000000001</length>
 							</WrapCylinder>
-						</objects>							
+						</objects>
 						<groups />
 					</WrapObjectSet>
 					<!--The mass of the body (kg)-->
@@ -5309,7 +5309,7 @@
 					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
 					<WrapObjectSet name="wrapobjectset">
 						<objects>
-							<WrapCylinder name="TRIlongglen">
+							<WrapCylinder name="TRIlongglen_l">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -5346,7 +5346,7 @@
 					<mass_center>0 0 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>0.0001 0.0001 0.0001 0 0 0</inertia>
-				</Body>				
+				</Body>
 				<Body name="humerus_l">
 					<!--The geometry used to display the axes of this Frame.-->
 					<FrameGeometry name="frame_geometry">
@@ -5376,7 +5376,7 @@
 					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
 					<WrapObjectSet name="wrapobjectset">
 						<objects>
-							<WrapEllipsoid name="Elbow_BIC_BRD">
+							<WrapEllipsoid name="Elbow_BIC_BRD_l">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -5402,7 +5402,7 @@
 								<!--The length of the radii of the ellipsoid.-->
 								<dimensions>0.014999999999999999 0.014999999999999999 0.10000000000000001</dimensions>
 							</WrapEllipsoid>
-							<WrapEllipsoid name="TRIlonghh">
+							<WrapEllipsoid name="TRIlonghh_l">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -5428,7 +5428,7 @@
 								<!--The length of the radii of the ellipsoid.-->
 								<dimensions>0.035000000000000003 0.02 0.02</dimensions>
 							</WrapEllipsoid>
-							<WrapCylinder name="TRI">
+							<WrapCylinder name="TRI_l">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -5456,7 +5456,7 @@
 								<!--The length of the cylinder.-->
 								<length>0.10000000000000001</length>
 							</WrapCylinder>
-							<WrapEllipsoid name="ANC">
+							<WrapEllipsoid name="ANC_l">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -5482,7 +5482,7 @@
 								<!--The length of the radii of the ellipsoid.-->
 								<dimensions>0.02 0.02 0.02</dimensions>
 							</WrapEllipsoid>
-							<WrapEllipsoid name="BIClong">
+							<WrapEllipsoid name="BIClong_l">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
@@ -6298,7 +6298,7 @@
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
 					</frames>
-				</WeldJoint>				
+				</WeldJoint>
 				<CustomJoint name="hip_r">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>pelvis_offset</socket_parent_frame>
@@ -15973,7 +15973,7 @@
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
 					</frames>
-				</WeldJoint>				
+				</WeldJoint>
 			</objects>
 			<groups />
 		</JointSet>
@@ -54503,7 +54503,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRI</wrap_object>
+									<wrap_object>TRI_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -54511,7 +54511,7 @@
 								</PathWrap>
 								<PathWrap name="pathwrap_0">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRIlonghh</wrap_object>
+									<wrap_object>TRIlonghh_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -54519,7 +54519,7 @@
 								</PathWrap>
 								<PathWrap name="pathwrap_1">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRIlongglen</wrap_object>
+									<wrap_object>TRIlongglen_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -54553,7 +54553,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="TRIlong_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="TRIlong_r_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -54566,7 +54566,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="TRIlong_ForceVelocityCurve">
+					<ForceVelocityCurve name="TRIlong_r_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -54581,7 +54581,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="TRIlong_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="TRIlong_r_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -54594,7 +54594,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="TRIlong_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="TRIlong_r_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -54651,7 +54651,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRI</wrap_object>
+									<wrap_object>TRI_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -54685,7 +54685,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="TRIlat_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="TRIlat_r_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -54698,7 +54698,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="TRIlat_ForceVelocityCurve">
+					<ForceVelocityCurve name="TRIlat_r_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -54713,7 +54713,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="TRIlat_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="TRIlat_r_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -54726,7 +54726,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="TRIlat_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="TRIlat_r_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -54783,7 +54783,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRI</wrap_object>
+									<wrap_object>TRI_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -54817,7 +54817,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="TRImed_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="TRImed_r_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -54830,7 +54830,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="TRImed_ForceVelocityCurve">
+					<ForceVelocityCurve name="TRImed_r_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -54845,7 +54845,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="TRImed_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="TRImed_r_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -54858,7 +54858,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="TRImed_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="TRImed_r_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -54897,7 +54897,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>ANC</wrap_object>
+									<wrap_object>ANC_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -54931,7 +54931,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="ANC_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="ANC_r_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -54944,7 +54944,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="ANC_ForceVelocityCurve">
+					<ForceVelocityCurve name="ANC_r_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -54959,7 +54959,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="ANC_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="ANC_r_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -54972,7 +54972,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="ANC_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="ANC_r_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -55204,7 +55204,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>Elbow_BIC_BRD</wrap_object>
+									<wrap_object>Elbow_BIC_BRD_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -55212,7 +55212,7 @@
 								</PathWrap>
 								<PathWrap name="pathwrap_0">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>BIClong</wrap_object>
+									<wrap_object>BIClong_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -55246,7 +55246,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="BIClong_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="BIClong_r_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -55259,7 +55259,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="BIClong_ForceVelocityCurve">
+					<ForceVelocityCurve name="BIClong_r_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -55274,7 +55274,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="BIClong_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="BIClong_r_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -55287,7 +55287,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="BIClong_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="BIClong_r_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -55381,7 +55381,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>Elbow_BIC_BRD</wrap_object>
+									<wrap_object>Elbow_BIC_BRD_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -55415,7 +55415,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="BICshort_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="BICshort_r_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -55428,7 +55428,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="BICshort_ForceVelocityCurve">
+					<ForceVelocityCurve name="BICshort_r_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -55443,7 +55443,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="BICshort_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="BICshort_r_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -55456,7 +55456,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="BICshort_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="BICshort_r_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -55540,7 +55540,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="BRA_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="BRA_r_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -55553,7 +55553,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="BRA_ForceVelocityCurve">
+					<ForceVelocityCurve name="BRA_r_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -55568,7 +55568,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="BRA_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="BRA_r_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -55581,7 +55581,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="BRA_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="BRA_r_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -55626,7 +55626,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>Elbow_BIC_BRD</wrap_object>
+									<wrap_object>Elbow_BIC_BRD_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -55660,7 +55660,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="BRD_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="BRD_r_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -55673,7 +55673,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="BRD_ForceVelocityCurve">
+					<ForceVelocityCurve name="BRD_r_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -55688,7 +55688,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="BRD_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="BRD_r_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -55701,7 +55701,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="BRD_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="BRD_r_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -55711,7 +55711,7 @@
 						<!--Tendon curve bend, from linear (0) to maximum bend (1)-->
 						<curviness>0.45040000000000002</curviness>
 					</TendonForceLengthCurve>
-				</Millard2012EquilibriumMuscle>	
+				</Millard2012EquilibriumMuscle>
 				<Millard2012EquilibriumMuscle name="TRIlong_l">
 					<!--Flag indicating whether the force is applied or not. If true the forceis applied to the MultibodySystem otherwise the force is not applied.NOTE: Prior to OpenSim 4.0, this behavior was controlled by the 'isDisabled' property, where 'true' meant that force was not being applied. Thus, if 'isDisabled' is true, then 'appliesForce` is false.-->
 					<appliesForce>true</appliesForce>
@@ -55758,7 +55758,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRI</wrap_object>
+									<wrap_object>TRI_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -55766,7 +55766,7 @@
 								</PathWrap>
 								<PathWrap name="pathwrap_0">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRIlonghh</wrap_object>
+									<wrap_object>TRIlonghh_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -55774,7 +55774,7 @@
 								</PathWrap>
 								<PathWrap name="pathwrap_1">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRIlongglen</wrap_object>
+									<wrap_object>TRIlongglen_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -55808,7 +55808,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="TRIlong_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="TRIlong_l_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -55821,7 +55821,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="TRIlong_ForceVelocityCurve">
+					<ForceVelocityCurve name="TRIlong_l_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -55836,7 +55836,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="TRIlong_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="TRIlong_l_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -55849,7 +55849,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="TRIlong_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="TRIlong_l_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -55906,7 +55906,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRI</wrap_object>
+									<wrap_object>TRI_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -55940,7 +55940,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="TRIlat_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="TRIlat_l_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -55953,7 +55953,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="TRIlat_ForceVelocityCurve">
+					<ForceVelocityCurve name="TRIlat_l_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -55968,7 +55968,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="TRIlat_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="TRIlat_l_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -55981,7 +55981,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="TRIlat_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="TRIlat_l_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -56038,7 +56038,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>TRI</wrap_object>
+									<wrap_object>TRI_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -56072,7 +56072,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="TRImed_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="TRImed_l_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -56085,7 +56085,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="TRImed_ForceVelocityCurve">
+					<ForceVelocityCurve name="TRImed_l_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -56100,7 +56100,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="TRImed_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="TRImed_l_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -56113,7 +56113,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="TRImed_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="TRImed_l_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -56152,7 +56152,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>ANC</wrap_object>
+									<wrap_object>ANC_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -56186,7 +56186,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="ANC_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="ANC_l_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -56199,7 +56199,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="ANC_ForceVelocityCurve">
+					<ForceVelocityCurve name="ANC_l_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -56214,7 +56214,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="ANC_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="ANC_l_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -56227,7 +56227,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="ANC_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="ANC_l_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -56459,7 +56459,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>Elbow_BIC_BRD</wrap_object>
+									<wrap_object>Elbow_BIC_BRD_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -56467,7 +56467,7 @@
 								</PathWrap>
 								<PathWrap name="pathwrap_0">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>BIClong</wrap_object>
+									<wrap_object>BIClong_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -56501,7 +56501,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="BIClong_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="BIClong_l_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -56514,7 +56514,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="BIClong_ForceVelocityCurve">
+					<ForceVelocityCurve name="BIClong_l_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -56529,7 +56529,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="BIClong_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="BIClong_l_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -56542,7 +56542,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="BIClong_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="BIClong_l_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -56636,7 +56636,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>Elbow_BIC_BRD</wrap_object>
+									<wrap_object>Elbow_BIC_BRD_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -56670,7 +56670,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="BICshort_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="BICshort_l_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -56683,7 +56683,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="BICshort_ForceVelocityCurve">
+					<ForceVelocityCurve name="BICshort_l_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -56698,7 +56698,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="BICshort_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="BICshort_l_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -56711,7 +56711,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="BICshort_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="BICshort_l_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -56795,7 +56795,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="BRA_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="BRA_l_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -56808,7 +56808,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="BRA_ForceVelocityCurve">
+					<ForceVelocityCurve name="BRA_l_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -56823,7 +56823,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="BRA_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="BRA_l_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -56836,7 +56836,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="BRA_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="BRA_l_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -56881,7 +56881,7 @@
 							<objects>
 								<PathWrap name="pathwrap">
 									<!--A WrapObject that this PathWrap interacts with.-->
-									<wrap_object>Elbow_BIC_BRD</wrap_object>
+									<wrap_object>Elbow_BIC_BRD_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -56915,7 +56915,7 @@
 					<!--Activation lower bound.-->
 					<minimum_activation>0</minimum_activation>
 					<!--Active-force-length curve.-->
-					<ActiveForceLengthCurve name="BRD_ActiveForceLengthCurve">
+					<ActiveForceLengthCurve name="BRD_l_ActiveForceLengthCurve">
 						<!--Normalized fiber length where the steep ascending limb starts-->
 						<min_norm_active_fiber_length>0.43269999999999997</min_norm_active_fiber_length>
 						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
@@ -56928,7 +56928,7 @@
 						<minimum_value>0</minimum_value>
 					</ActiveForceLengthCurve>
 					<!--Force-velocity curve.-->
-					<ForceVelocityCurve name="BRD_ForceVelocityCurve">
+					<ForceVelocityCurve name="BRD_l_ForceVelocityCurve">
 						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
 						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
 						<!--Curve slope just before reaching concentric_slope_at_vmax-->
@@ -56943,7 +56943,7 @@
 						<max_eccentric_velocity_force_multiplier>1.3999999999999999</max_eccentric_velocity_force_multiplier>
 					</ForceVelocityCurve>
 					<!--Passive-force-length curve.-->
-					<FiberForceLengthCurve name="BRD_FiberForceLengthCurve">
+					<FiberForceLengthCurve name="BRD_l_FiberForceLengthCurve">
 						<!--Fiber strain at zero force-->
 						<strain_at_zero_force>0</strain_at_zero_force>
 						<!--Fiber strain at a tension of 1 normalized force-->
@@ -56956,7 +56956,7 @@
 						<curviness>0.66579999999999995</curviness>
 					</FiberForceLengthCurve>
 					<!--Tendon-force-length curve.-->
-					<TendonForceLengthCurve name="BRD_TendonForceLengthCurve">
+					<TendonForceLengthCurve name="BRD_l_TendonForceLengthCurve">
 						<!--Tendon strain at a tension of 1 normalized force-->
 						<strain_at_one_norm_force>0.033000000000000002</strain_at_one_norm_force>
 						<!--Tendon stiffness at a tension of 1 normalized force-->
@@ -56966,7 +56966,7 @@
 						<!--Tendon curve bend, from linear (0) to maximum bend (1)-->
 						<curviness>0.45040000000000002</curviness>
 					</TendonForceLengthCurve>
-				</Millard2012EquilibriumMuscle>								
+				</Millard2012EquilibriumMuscle>
 				<CoordinateActuator name="elbow_l_actuator">
 					<!--Flag indicating whether the force is applied or not. If true the forceis applied to the MultibodySystem otherwise the force is not applied.NOTE: Prior to OpenSim 4.0, this behavior was controlled by the 'isDisabled' property, where 'true' meant that force was not being applied. Thus, if 'isDisabled' is true, then 'appliesForce` is false.-->
 					<appliesForce>true</appliesForce>
@@ -57474,7 +57474,7 @@
 					<pointB>0.11055761958335 -0.138532267423426 -0.119632119917592</pointB>
 					<!--The maximum force produced by this actuator when fully activated.-->
 					<optimal_force>1000</optimal_force>
-				</PointToPointActuator>				
+				</PointToPointActuator>
 			</objects>
 			<groups>
 				<ObjectGroup name="right_leg">
