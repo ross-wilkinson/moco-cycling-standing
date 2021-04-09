@@ -37,7 +37,7 @@
 		<!--Acceleration due to gravity, expressed in ground.-->
 		<gravity>0 -9.8065999999999995 0</gravity>
 		<!--Credits (e.g., model author names) associated with the model.-->
-		<credits>Rajagopal et al., Lai et al., Burkhart et al., Saul et al.</credits>
+		<credits>Rajagopal et al., Lai et al., Allaire et al., Saul et al., McFarland et al.</credits>
 		<!--Publications and references associated with the model.-->
 		<publications></publications>
 		<!--Units for all lengths.-->
