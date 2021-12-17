@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSimDocument Version="30000">
+   <InverseKinematicsTool name="subject01_standing_10_70">
+      <results_directory>C:\Users\uqrwilk5\OneDrive - The University of Queensland\exp01\subject01\results</results_directory>
+      <model_file>C:\Users\uqrwilk5\OneDrive - The University of Queensland\exp01\subject01\results\subject01_scale_model.osim</model_file>
+      <constraint_weight>infinity</constraint_weight>
+      <accuracy>1e-05</accuracy>
+      <IKTaskSet file="C:\Users\uqrwilk5\OneDrive - The University of Queensland\opensim\generic_ik_task_file.xml"/>
+      <marker_file>C:\Users\uqrwilk5\OneDrive - The University of Queensland\exp01\subject01\data\subject01_standing_10_70.trc</marker_file>
+      <time_range>[0.01 10]</time_range>
+      <report_errors>true</report_errors>
+      <output_motion_file>C:\Users\uqrwilk5\OneDrive - The University of Queensland\exp01\subject01\results\subject01_standing_10_70_ik.mot</output_motion_file>
+   </InverseKinematicsTool>
+</OpenSimDocument>

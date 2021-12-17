@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSimDocument Version="40000">
+   <InverseDynamicsTool name="BLR_s01c0101">
+      <results_directory>/Users/rosswilkinson/Google Drive/projects/moco-cycling-standing/results</results_directory>
+      <model_file>/Users/rosswilkinson/Google Drive/projects/moco-cycling-standing/results/BLR_s01modelScaled.osim</model_file>
+      <time_range>[0.005 10]</time_range>
+      <forces_to_exclude>actuators muscles</forces_to_exclude>
+      <external_loads_file>/Users/rosswilkinson/Google Drive/projects/moco-cycling-standing/setup/BLR_s01c0101setupExternalLoads.xml</external_loads_file>
+      <coordinates_file>/Users/rosswilkinson/Google Drive/projects/moco-cycling-standing/results/BLR_s01c0101inverseKinematics.mot</coordinates_file>
+      <lowpass_cutoff_frequency_for_coordinates>12</lowpass_cutoff_frequency_for_coordinates>
+      <output_gen_force_file>s01c0101inverseDynamics.sto</output_gen_force_file>
+      <joints_to_report_body_forces>All</joints_to_report_body_forces>
+   </InverseDynamicsTool>
+</OpenSimDocument>

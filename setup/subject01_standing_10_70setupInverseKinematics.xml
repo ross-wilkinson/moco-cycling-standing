@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSimDocument Version="40000">
+   <InverseKinematicsTool name="subject01_standing_10_70">
+      <results_directory>/Users/rosswilkinson/Google Drive/projects/moco-cycling-standing/results</results_directory>
+      <model_file>/Users/rosswilkinson/Google Drive/projects/moco-cycling-standing/results/subject01modelScaled.osim</model_file>
+      <constraint_weight>infinity</constraint_weight>
+      <accuracy>1e-05</accuracy>
+      <IKTaskSet file="/Users/rosswilkinson/Google Drive/projects/moco-cycling-standing/model/tasksInverseKinematics.xml"/>
+      <marker_file>/Users/rosswilkinson/Google Drive/projects/moco-cycling-standing/data/subject01_standing_10_70.trc</marker_file>
+      <time_range>[0.01 10]</time_range>
+      <report_errors>true</report_errors>
+      <output_motion_file>/Users/rosswilkinson/Google Drive/projects/moco-cycling-standing/results/subject01_standing_10_70inverseKinematics.mot</output_motion_file>
+      <report_marker_locations>true</report_marker_locations>
+   </InverseKinematicsTool>
+</OpenSimDocument>

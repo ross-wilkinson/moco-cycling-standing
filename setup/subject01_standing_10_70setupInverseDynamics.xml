@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSimDocument Version="30000">
+   <InverseDynamicsTool name="subject01_standing_10_70">
+      <results_directory>D:\exp01\subject01\results</results_directory>
+      <model_file>D:\exp01\subject01\results\subject01modelScaled.osim</model_file>
+      <time_range>[0.01 10]</time_range>
+      <forces_to_exclude>actuators muscles</forces_to_exclude>
+      <external_loads_file>D:\exp01\subject01\setup\subject01_standing_10_70setupExternalLoads.xml</external_loads_file>
+      <coordinates_file>D:\exp01\subject01\results\subject01_standing_10_70inverseKinematics.mot</coordinates_file>
+      <lowpass_cutoff_frequency_for_coordinates>12</lowpass_cutoff_frequency_for_coordinates>
+      <output_gen_force_file>subject01_standing_10_70inverseDynamics.sto</output_gen_force_file>
+      <joints_to_report_body_forces>All</joints_to_report_body_forces>
+   </InverseDynamicsTool>
+</OpenSimDocument>

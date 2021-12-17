@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSimDocument Version="30000">
+   <ExternalLoads name="subject01_standing_10_70">
+      <objects>
+         <ExternalForce name="crank_r">
+            <isDisabled>false</isDisabled>
+            <applied_to_body>calcn_r</applied_to_body>
+            <force_expressed_in_body>ground</force_expressed_in_body>
+            <point_expressed_in_body>ground</point_expressed_in_body>
+            <force_identifier>Force_r_v</force_identifier>
+            <point_identifier>Force_r_p</point_identifier>
+         </ExternalForce>
+         <ExternalForce name="crank_l">
+            <isDisabled>false</isDisabled>
+            <applied_to_body>calcn_l</applied_to_body>
+            <force_expressed_in_body>ground</force_expressed_in_body>
+            <point_expressed_in_body>ground</point_expressed_in_body>
+            <force_identifier>Force_l_v</force_identifier>
+            <point_identifier>Force_l_p</point_identifier>
+         </ExternalForce>
+      </objects>
+      <datafile>C:\Users\uqrwilk5\OneDrive - The University of Queensland\exp01\subject01\setup\subject01_standing_10_70_force_data_file.mot</datafile>
+      <external_loads_model_kinematics_file>C:\Users\uqrwilk5\OneDrive - The University of Queensland\exp01\subject01\results\subject01_standing_10_70_ik.mot</external_loads_model_kinematics_file>
+      <lowpass_cutoff_frequency_for_load_kinematics>12</lowpass_cutoff_frequency_for_load_kinematics>
+   </ExternalLoads>
+</OpenSimDocument>

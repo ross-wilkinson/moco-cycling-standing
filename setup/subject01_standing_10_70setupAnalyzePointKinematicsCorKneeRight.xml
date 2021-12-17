@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSimDocument Version="30000">
+   <AnalyzeTool name="subject01_standing_10_70">
+      <model_file>D:\exp01\subject01\results\subject01modelScaled.osim</model_file>
+      <results_directory>D:\exp01\subject01\results</results_directory>
+      <lowpass_cutoff_frequency_for_coordinates>-1</lowpass_cutoff_frequency_for_coordinates>
+      <AnalysisSet>
+         <objects>
+            <PointKinematics>
+               <on>true</on>
+               <body_name>tibia_r</body_name>
+               <relative_to_body_name>ground</relative_to_body_name>
+               <point_name>CorKneeRight</point_name>
+               <point>[0 0 0]</point>
+               <start_time>0.01</start_time>
+               <end_time>10</end_time>
+            </PointKinematics>
+         </objects>
+      </AnalysisSet>
+      <initial_time>0.01</initial_time>
+      <final_time>10</final_time>
+      <coordinates_file>D:\exp01\subject01\results\subject01_standing_10_70inverseKinematics.mot</coordinates_file>
+   </AnalyzeTool>
+</OpenSimDocument>
